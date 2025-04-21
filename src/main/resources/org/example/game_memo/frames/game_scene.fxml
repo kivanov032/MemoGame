@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.game_memo.GameController">
+    <stylesheets>
+        <URL value="@../css/styles.css" />
+    </stylesheets>
+
+    <!-- Шапка с кнопкой Меню слева -->
+    <top>
+        <StackPane prefHeight="50" styleClass="hbox-menu">
+            <Label text="ИГРА МЕМО" styleClass="label-menu"
+                   alignment="CENTER" />
+
+            <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 0 0 10;">
+                <Button fx:id="goToMenuButton" text="МЕНЮ" styleClass="game-button"
+                        HBox.hgrow="NEVER" />
+            </HBox>
+        </StackPane>
+    </top>
+
+    <!-- Центральная область с GridPane -->
+    <center>
+        <StackPane>
+            <VBox alignment="CENTER" style="-fx-padding: 30 0 30 0;">
+                <GridPane fx:id="gridPane" hgap="20" vgap="20"/>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Нижняя панель (footer) с динамическими отступами -->
+    <bottom>
+        <StackPane styleClass="footer-style">
+            <HBox fx:id="bottomHBox" alignment="CENTER" spacing="50" style="-fx-padding: 10;">
+                <Button fx:id="changeStateCard" text="Перевернуть карточки" styleClass="game-button"/>
+                <Button fx:id="updateCards" text="Обновить карточки" styleClass="game-button"/>
+            </HBox>
+        </StackPane>
+    </bottom>
+
+</BorderPane>

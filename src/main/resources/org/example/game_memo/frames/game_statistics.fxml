@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.game_memo.GameController">
+    <stylesheets>
+        <URL value="@../css/styles.css" />
+    </stylesheets>
+
+    <!-- Шапка с заголовком -->
+    <top>
+        <StackPane prefHeight="60" styleClass="hbox-menu">
+            <Label text="РЕЗУЛЬТАТЫ ИГРЫ" styleClass="label-menu"
+                   alignment="CENTER" />
+        </StackPane>
+    </top>
+
+    <!-- Центральная область с статистикой -->
+    <center>
+        <VBox alignment="CENTER" spacing="30" style="-fx-padding: 30;">
+            <!-- Блок статистики с фиксированными размерами строк -->
+            <GridPane hgap="30" vgap="15" alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="150"/>
+                    <ColumnConstraints halignment="LEFT" minWidth="100"/>
+                </columnConstraints>
+
+                <!-- Явное задание высоты строк -->
+                <rowConstraints>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                </rowConstraints>
+
+                <!-- Строки статистики -->
+                <Label text="Найдено пар:" styleClass="section-title" GridPane.rowIndex="0"/>
+                <Label fx:id="matchedPairsLabel" text="0" styleClass="section-title"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Ошибки:" styleClass="section-title" GridPane.rowIndex="1"/>
+                <Label fx:id="errorsLabel" text="0" styleClass="section-title"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Лишние клики:" styleClass="section-title" GridPane.rowIndex="2"/>
+                <Label fx:id="extraTapsLabel" text="0" styleClass="section-title"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Кол-во подсказок:" styleClass="section-title" GridPane.rowIndex="3"/>
+                <Label fx:id="cardTurningLabel" text="0" styleClass="section-title"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <Label text="Время игры:" styleClass="section-title" GridPane.rowIndex="4"/>
+                <Label fx:id="timeLabel" text="00:00:00" styleClass="section-title"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            </GridPane>
+
+            <Separator prefWidth="300"/>
+        </VBox>
+    </center>
+
+
+    <!-- Нижняя панель с кнопками -->
+    <bottom>
+        <StackPane styleClass="footer-style">
+            <HBox alignment="CENTER" style="-fx-padding: 5;">
+                <Button fx:id="goToMenuButton" text="Новая игра" styleClass="game-button"/>
+            </HBox>
+        </StackPane>
+    </bottom>
+
+</BorderPane>

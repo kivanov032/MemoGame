@@ -1,0 +1,124 @@
+.start-button {
+  -fx-background-color: #1E90FF;
+  -fx-text-fill: white;
+  -fx-font-size: 30px;
+  -fx-font-weight: bold;
+  -fx-padding: 20px 40px;
+  -fx-background-radius: 15px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+  -fx-transition: all 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  -fx-background-color: #1d94ef;
+  -fx-translate-y: -5px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+  -fx-cursor: hand;
+}
+
+.start-button:pressed {
+  -fx-background-color: #6ca3ff;
+  -fx-translate-y: 0px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 20, 0, 0, 0);
+}
+
+.start-game-button {
+  -fx-background-color: #1E90FF;
+  -fx-text-fill: white;
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+  -fx-padding: 10px 50px;
+  -fx-background-radius: 10px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0);
+  -fx-transition: all 0.3s ease-in-out;
+}
+
+.start-game-button:hover {
+  -fx-background-color: #1d94ef;
+  -fx-translate-y: -3px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 12, 0, 0, 0);
+  -fx-cursor: hand;
+}
+
+.start-game-button:pressed {
+  -fx-background-color: #6ca3ff;
+  -fx-translate-y: 0px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 16, 0, 0, 0);
+}
+
+/* Базовый стиль для всех кнопок */
+.game-button {
+  -fx-background-color: #1E90FF;
+  -fx-text-fill: white;
+  -fx-font-size: 20px;       /* Увеличенный размер шрифта */
+  -fx-font-weight: bold;
+  -fx-padding: 8px 25px;    /* Увеличенные отступы */
+  -fx-background-radius: 10px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 6, 0, 0, 0);
+  -fx-transition: all 0.2s ease-in-out;
+  -fx-min-width: 120px;     /* Увеличенная минимальная ширина */
+  -fx-pref-height: 50px;    /* Оптимальная высота */
+}
+
+/* Эффекты при наведении */
+.game-button:hover {
+  -fx-background-color: #1d94ef;
+  -fx-translate-y: -3px;    /* Слегка увеличенное смещение */
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 0);
+  -fx-cursor: hand;
+}
+
+/* Состояние нажатия */
+.game-button:pressed {
+  -fx-background-color: #6ca3ff;
+  -fx-translate-y: 0px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 12, 0, 0, 0);
+}
+
+
+.custom-checkbox {
+  -fx-font-size: 16px;
+  -fx-text-fill: #0a2188;
+  -fx-padding: 5px 10px;
+  -fx-background-radius: 5px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0);
+  -fx-transition: all 0.3s ease-in-out;
+}
+
+.custom-checkbox:selected {
+  -fx-background-color: #6ca3ff;
+}
+
+.custom-checkbox:hover {
+  -fx-background-color: #74a1ed; /* Цвет фона при наведении */
+  -fx-cursor: hand; /* Курсор при наведении */
+}
+
+
+
+.section-title {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #0a2188;
+}
+
+.hbox-menu {
+  -fx-background-color: #0a2188;
+}
+
+.label-menu {
+  -fx-text-fill: white;
+  -fx-font-size: 30px;
+  -fx-font-weight: bold;
+}
+
+.footer-style {
+  -fx-background-color: #0a2188;
+  -fx-padding: 10px;
+  -fx-border-width: 1px 0 0 0;
+  -fx-border-color: #444;
+}
+
+.root {
+  -fx-background-color: #9cd8ea;
+}

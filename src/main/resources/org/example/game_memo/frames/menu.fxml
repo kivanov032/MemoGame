@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.game_memo.GameController" prefWidth="420" prefHeight="600">
+    <stylesheets>
+        <URL value="@../css/styles.css" />
+    </stylesheets>
+
+    <!-- Шапка меню -->
+    <HBox alignment="CENTER" styleClass="hbox-menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" prefHeight="50">
+        <Label text="Меню Мемо" styleClass="label-menu" />
+    </HBox>
+
+    <!-- Основное содержимое -->
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+
+        <!-- Секция выбора категорий -->
+        <Label text="Выберите категории карточек:" styleClass="section-title" />
+
+        <VBox spacing="10.0" style="-fx-padding: 0 0 0 100;">
+            <!-- Главный чекбокс "Выбрать все" -->
+            <CheckBox fx:id="selectAllCheckBox" text="Все категории" styleClass="custom-checkbox"
+                      onAction="#handleSelectAllCategories"
+                      style="-fx-font-weight: bold;"/>
+            <CheckBox fx:id="checkBoxSmiles" text="Смайлики (эмоджи)" styleClass="custom-checkbox" />
+            <CheckBox fx:id="checkBoxAnimal" text="Животные (эмоджи)" styleClass="custom-checkbox" />
+            <CheckBox fx:id="checkBoxFood" text="Еда (эмоджи)" styleClass="custom-checkbox" />
+            <CheckBox fx:id="checkBoxSport" text="Спорт (эмоджи)" styleClass="custom-checkbox" />
+            <CheckBox fx:id="checkBoxFlags" text="Флаги (эмоджи)" styleClass="custom-checkbox" />
+        </VBox>
+
+        <!-- Секция сложности -->
+        <Label text="Выберете уровень сложности:" styleClass="section-title" />
+        <HBox alignment="CENTER" spacing="10">
+            <RadioButton fx:id="checkBoxEasy" text=" Легкий&#10;  (3х4)" styleClass="custom-checkbox" userData="EASY"/>
+            <RadioButton fx:id="checkBoxMedium" text=" Средний&#10;   (4х5)" styleClass="custom-checkbox" userData="MEDIUM"/>
+            <RadioButton fx:id="checkBoxHard" text=" Сложный&#10;   (5х6)" styleClass="custom-checkbox" userData="HARD"/>
+        </HBox>
+
+        <!-- Кнопка начала игры -->
+        <Button fx:id="startGameButton" text="Начать игру!" styleClass="start-game-button" />
+    </VBox>
+</AnchorPane>

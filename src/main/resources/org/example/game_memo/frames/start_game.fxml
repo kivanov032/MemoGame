@@ -1,0 +1,14 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import java.net.URL?>
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.game_memo.GameController" prefWidth="400" prefHeight="300">
+    <stylesheets>
+        <URL value="@../css/styles.css" />
+    </stylesheets>
+    <Button fx:id="goToMenuButton" mnemonicParsing="false" text="Начать" styleClass="start-button" />
+</StackPane>
+
+
