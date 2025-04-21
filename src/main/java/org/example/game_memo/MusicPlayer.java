@@ -37,7 +37,7 @@ public class MusicPlayer {
         if (errors <= 2 && cardTurning <= 1 && matchedPairs >= 10) {
             return "wow-sound-effect-great.mp3";
         }
-        else if (errors <= 2 && cardTurning <= 2) {
+        else if (errors <= 3 && cardTurning <= 2) {
             return "wow-sound-effect-good.mp3";
         }
         return "wow-sound-effect-notBad.mp3";
