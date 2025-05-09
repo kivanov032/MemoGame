@@ -3,9 +3,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-      spacing="10" alignment="CENTER" style="-fx-background-color: #ffebee; -fx-padding: 15;">
-    <Label text="Ошибка!" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #d32f2f;"/>
-    <Label fx:id="errorMessageLabel" wrapText="true" maxWidth="300" style="-fx-text-fill: #b71c1c;"/>
-    <Button fx:id="closeButton" text="Закрыть" style="-fx-background-color: #d32f2f; -fx-text-fill: white;"/>
+<VBox xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.game_memo.Controllers.ErrorBoxController"
+      spacing="10"
+      alignment="CENTER"
+      style="-fx-background-color: #ffebee; -fx-padding: 15;">
+
+    <Label text="Ошибка!"
+           style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #d32f2f;"/>
+
+    <Label fx:id="errorMessageLabel"
+           wrapText="true"
+           maxWidth="300"
+           style="-fx-text-fill: #b71c1c;"/>
+
+    <Button fx:id="closeButton"
+            text="Закрыть"
+            style="-fx-background-color: #d32f2f; -fx-text-fill: white;"/>
 </VBox>

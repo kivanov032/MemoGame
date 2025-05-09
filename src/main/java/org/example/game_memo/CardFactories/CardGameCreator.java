@@ -1,10 +1,15 @@
-package org.example.game_memo;
+package org.example.game_memo.CardFactories;
+
+import org.example.game_memo.CardThings.CardGame;
+import org.example.game_memo.CardThings.CardProxy;
 
 import java.util.*;
 import java.util.function.Function;
 
-public class CardPairCreator {
-    public List<CardGame> createPairs(List<CardProxy> proxies, int pairsCount, Function<CardProxy, CardGame> cardCreator) {
+public class CardGameCreator {
+
+    // Создание игровых карт
+    public static List<CardGame> createGameCards(List<CardProxy> proxies, int pairsCount, Function<CardProxy, CardGame> cardCreator) {
         List<CardGame> pairs = new ArrayList<>();
         List<CardProxy> selected = selectRandomProxies(proxies, pairsCount);
 
@@ -17,14 +22,15 @@ public class CardPairCreator {
         return pairs;
     }
 
-    private List<CardProxy> selectRandomProxies(List<CardProxy> proxies, int count) {
+    // Рандомный выбор прокси-карт для создания игровых карт
+    private static List<CardProxy> selectRandomProxies(List<CardProxy> proxies, int count) {
         if (count > proxies.size()) {
             throw new IllegalArgumentException(
                     String.format("Запрошено %d карт, но доступно только %d", count, proxies.size())
             );
         }
         List<CardProxy> shuffled = new ArrayList<>(proxies);
-        Collections.shuffle(shuffled);
+        Collections.shuffle(shuffled); // Перемешивание карт
         return shuffled.subList(0, count);
     }
 }

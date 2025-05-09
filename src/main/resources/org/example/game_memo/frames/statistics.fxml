@@ -4,7 +4,7 @@
 <?import java.net.URL?>
 
 <BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.game_memo.GameController">
+            fx:controller="org.example.game_memo.Controllers.StatisticsController">
     <stylesheets>
         <URL value="@../css/styles.css" />
     </stylesheets>

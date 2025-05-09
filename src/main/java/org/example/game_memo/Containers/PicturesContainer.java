@@ -1,10 +1,10 @@
-package org.example.game_memo;
+package org.example.game_memo.Containers;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Pictures {
+public class PicturesContainer {
 
     public static final String CARD_BACK_PATH = "/CardBack/card_back.jpg";
 
@@ -19,7 +19,7 @@ public class Pictures {
     public static final Map<String, String> FOOD_IMAGES;
     public static final String DIRECTORY_TO_FOOD_IMAGES = IMAGE_MAIN_PATH + "FoodEmodji/";
     public static final Map<String, String> FLAG_IMAGES;
-    public static String DIRECTORY_TO_FLAG_IMAGES = IMAGE_MAIN_PATH + "FlagEmodji/";
+    public static final String DIRECTORY_TO_FLAG_IMAGES = IMAGE_MAIN_PATH + "FlagEmodji/";
 
     static {
         // Инициализация словаря с изображениями эмоций

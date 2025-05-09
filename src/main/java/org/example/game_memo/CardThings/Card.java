@@ -1,4 +1,4 @@
-package org.example.game_memo;
+package org.example.game_memo.CardThings;
 
 import javafx.scene.image.Image;
 
